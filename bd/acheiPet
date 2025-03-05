@@ -1,0 +1,80 @@
+
+create database acheipet;
+use acheipet;
+
+CREATE TABLE imagens (
+    id_imagem INT NOT NULL AUTO_INCREMENT,
+    imagem_Default VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id_imagem)
+);
+
+INSERT INTO imagens (imagem_Default) 
+VALUES ('../view/upload/profileNotImage.jpeg');
+
+
+CREATE TABLE parceiros (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    opcao VARCHAR(50) DEFAULT NULL,
+    comentario TEXT DEFAULT NULL,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
+
+
+CREATE TABLE usuarios (
+    id_usuarios INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    sobrenome VARCHAR(50) NOT NULL,
+    nomeUsuario VARCHAR(50) NOT NULL,
+    nomeConta VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    senha VARCHAR(50) NOT NULL,
+    numero VARCHAR(50) NOT NULL,
+    dataNasc DATE NOT NULL,
+    cidade VARCHAR(50) DEFAULT NULL,
+    estado VARCHAR(50) DEFAULT NULL,
+    politicas VARCHAR(50) DEFAULT NULL,
+    bio VARCHAR(250) DEFAULT NULL,
+    pronomes VARCHAR(10) DEFAULT NULL,
+    profile_Image INT DEFAULT 1,
+    PRIMARY KEY (id_usuarios),
+    KEY profile_Image (profile_Image),
+    CONSTRAINT fk_profile_image FOREIGN KEY (profile_Image) REFERENCES imagens(id_imagem)
+);
+
+
+CREATE TABLE pets (
+    idPet INT NOT NULL AUTO_INCREMENT,
+    usuario_id INT NOT NULL,
+    nome_pet VARCHAR(100) NOT NULL,
+    tipo_pet ENUM('Gato', 'Cachorro', 'Outros') NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (idPet),
+    KEY fk_usuario_id (usuario_id),
+    CONSTRAINT fk_pets_usuario FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuarios)
+);
+
+
+CREATE TABLE seguidores(
+    id_seguidores int PRIMARY KEY not null AUTO_INCREMENT,
+    usuarioId int not null,
+    seguindoId int not null,
+    data_seguidor datetime default CURRENT_TIMESTAMP,
+    FOREIGN key (usuarioId) REFERENCES usuarios(id_usuarios),
+    FOREIGN key (seguindoId) REFERENCES usuarios(id_usuarios)
+);
+
+CREATE TABLE posts (
+    id_post INT NOT NULL AUTO_INCREMENT,
+    id_usuario INT NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
+    imagem VARCHAR(255) DEFAULT NULL,
+    data_publicacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    petPerdido TINYINT(1) DEFAULT NULL,
+    PRIMARY KEY (id_post),
+    KEY id_usuario (id_usuario),
+    CONSTRAINT fk_posts_usuario FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuarios)
+);
+
