@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="imagens/logonomecompleto.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <title>Login | Entrar</title>
+</head>
+
+<body>
+
+    <menu>
+        <div>
+            <a href="index.html">
+                <img class="logo" src="imagens/logonomecompleto.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="main-container">
+            <div class="container">
+                <h1>Login</h1>
+                <form action="../Controller/login.php" method="post">
+                    <div class="input-single">
+                        <input type="email" name="email" id="username" placeholder="Digite o seu email" required>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="input-single">
+                        <input type="password" name="senha" id="password" placeholder="Digite sua senha" required>
+                        <div class="underline"></div>
+                    </div>
+                    <input type="submit" value="">
+                </form>
+
+                <div class="footer">
+                    <span>Você é novo por aqui? <a href="cadastro.html">Registre-se</a></span>
+                </div>
+            </div>
+            </main>
+        </div>
+</body>
+
+</html>

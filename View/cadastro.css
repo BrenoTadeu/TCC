@@ -1,0 +1,405 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e9bb48;
+}
+
+.imgBody {
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 5%;
+    position: absolute;
+}
+
+.logo {
+    width: 135px;
+}
+
+.container {
+    position: absolute;
+    max-width: 100%;
+}
+
+.cadastroH1 {
+    padding-right: 29%;
+    padding-top: 5%;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+    color: black;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    width: 40%;
+    height: 48rem;
+    border-radius: 27px;
+    background-color: white;
+}
+
+.labelDataNasc{
+    font-size: 14px;
+}
+
+label{
+    margin-top: .5rem;
+    margin-bottom: -0.5rem;
+}
+
+.fundoFormulario {
+    display: flex;
+    justify-content: right;
+    height: 50rem;
+}
+
+form {
+    padding-right: 25%;
+    position: relative;
+    flex-direction: column-reverse;
+    height: 70vh;
+    margin: 10%;
+    overflow-y: scroll;
+}
+
+.input-single {
+    position: relative;
+    margin: 6%;
+}
+
+
+form .input-single:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-single .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 150%;
+    bottom: -5px;
+    left: 0;
+    background: rgb(255, 255, 255);
+}
+
+.input-single .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 150%;
+    bottom: -5px;
+    left: 0;
+    background-color: #000000;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-preenchido{
+    display: none;
+    position: absolute;
+    height: 1px;
+    width: 150%;
+    bottom: -5px;
+    left: 0;
+    background: rgb(0, 0, 0);
+}
+
+.inputInvalido{
+    display: none;
+    position: absolute;
+    height: 1px;
+    width: 150%;
+    bottom: -5px;
+    left: 0;
+    background: red;
+}
+
+.spanInput{
+    display: none;
+    position: absolute;
+    font-size: 11px;
+    margin-top: 6px;
+    color: red;
+    
+}
+
+.spanInputUserName{
+    display: none;
+    position: absolute;
+    font-size: 11px;
+    margin-top: 25px;
+    color: red;
+}
+
+.spanInputEmail{
+    display: none;
+    position: absolute;
+    font-size: 11px;
+    margin-top: 25px;
+    color: red;
+}
+
+.spanInputSenha{
+    display:none;
+    position: absolute;
+    font-size: 11px;
+    margin-top: 26px;
+    color: red;
+}
+
+.spanData{
+    margin-top: 3px;
+}
+
+
+.input-single input:focus~.underline::after {
+    transform: scaleX(1);
+}
+
+.input-single input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.827);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    width: 150%;
+}
+
+.input-single input::placeholder {
+    color: rgba(0, 0, 0, 0.827);
+}
+
+.labelCheckbox {
+    color: black;
+    font-size: 15px;
+}
+
+.pCheckbox{
+    position: absolute;
+    padding-left: 1.5rem;
+}
+
+.pCheckbox a{
+    color:#e9bb48;
+}
+
+.pCheckbox a:visited{
+    color:#e9bb48;
+}
+
+/* Hide the default checkbox */
+.labelCheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.labelCheckbox {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    --clr: #e9bb48;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.4em;
+    width: 1.4em;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: 300ms;
+}
+
+/* When the checkbox is checked, add a blue background */
+.labelCheckbox input:checked~.checkmark {
+    background-color: var(--clr);
+    border-radius: .5rem;
+    animation: pulse 500ms ease-in-out;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.labelCheckbox input:checked~.checkmark:after {
+    display: block;
+    font-size: 18px;
+}
+
+/* Style the checkmark/indicator */
+.labelCheckbox .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid #E0E0E2;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 #f8cc3a90;
+        rotate: 20deg;
+    }
+
+    50% {
+        rotate: -20deg;
+    }
+
+    75% {
+        box-shadow: 0 0 0 10px #f8cc3a90;
+    }
+
+    100% {
+        box-shadow: 0 0 0 13px #f8cc3a90;
+        rotate: 0;
+    }
+}
+
+
+form input[type="submit"] {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    width: 140%;
+    background-color: #e6e6e6de;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.3s ease;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 10%;
+    background-image: url(./imagens/pata2.png);
+}
+
+form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background-color: #e9be48;
+    background-image: url(./imagens/pata.png);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-left: 20%;
+}
+
+.footer span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer span a:link {
+    color: black;
+}
+
+.footer span a:visited {
+    color: black;
+}
+@media (max-width: 768px) {
+    .formulario {
+        width: 90%; /* Formulário ocupa 90% da tela em telas menores */
+        padding-right: 0;
+        margin-top: 8.1rem;
+    }
+
+    form{
+        overflow:visible;
+    }
+
+    .input-single.form-row .col {
+        width: 100%; /* Colunas se tornam de 100% em dispositivos móveis */
+        margin-bottom: 1rem;
+    }
+
+    .cadastroH1 {
+        font-size: 2rem;
+        padding-right: 0;
+    }
+
+    .imgBody {
+        width: 0; /* Imagem ocupa mais espaço em telas menores */
+    }
+
+    .footer {
+        padding-left: 0;
+        text-align: center;
+    }
+    .logo {
+        width: 120px;
+        
+    }
+    form input[type="submit"] {
+        padding: 1.2rem;
+        width: 140%;
+        background-color: #e6e6e6de;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        font-size: 0.2rem;
+        font-weight: 300;
+        border-radius: 20px;
+        border: none;
+        transition: all 0.3s ease;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 10%;
+        background-image: url(./imagens/pata2.png);
+        margin-top: 3rem;
+    }
+    
+    form input[type="submit"]:hover {
+        letter-spacing: 0.5px;
+        background-color: #e9be48;
+        background-image: url(./imagens/pata.png);
+        margin-top: 3rem;
+
+    }
+    .footer span {
+        font-size: 0.9rem;
+    }
+
+    .form-row>[class*=col-3] {
+        padding-right: 0px;
+    }
+}
+@media (max-width: 576px) {
+    form input[type="submit"] {
+        width: 100%;
+    }
+
+    .checkmark {
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+     .form-row>[class*=col-3] {
+        padding-right: 0px;
+    } 
+}

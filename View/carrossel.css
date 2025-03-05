@@ -1,0 +1,169 @@
+body {
+    /**/
+    margin: 0;
+    padding: 0;
+}
+
+/*container pai slider-container e afins*/
+#container {
+    /*height:100vh;*/
+    display: grid;
+    /*container de grade linha e coluna*/
+    place-items: center;
+    /*border:  solid 1px green;*/
+
+}
+
+/*slider-container pai slider*/
+#slider-container {
+    height: 150px;
+    /* diminuir aqui*/
+    width: 100%;
+    /* largura do box foi aqui que ajustei o tamano da pagina A4*/
+    max-width: 1400px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    /*border: solid red 2px;*/
+
+}
+
+/**/
+#slider-container .btn {
+    position: absolute;
+    top: calc(60% - 30px);
+    /*altura das setinhas*/
+    height: 15px;
+    width: 15px;
+    border-left: 8px solid #696969;
+    border-top: 8px solid #696969;
+    cursor: pointer;
+}
+
+#slider-container .btn:hover {
+    transform: scale(1.2);
+}
+
+/*
+#slider-container .btn.inactive{
+    border-color:#282828;
+}
+*/
+/*seta esquerda*/
+#slider-container .btn:first-of-type {
+    transform: rotate(-45deg);
+    left: 10px;
+}
+
+/*seta direita*/
+#slider-container .btn:last-of-type {
+    transform: rotate(135deg);
+    right: 10px;
+}
+
+/*manipulando as divs slide   */
+#slider-container #slider {
+    display: flex;
+    width: 1000%;
+    height: 100%;
+    transition: all .5s;
+
+
+}
+
+/*div slide dentro do conatiner: slider-container  */
+#slider-container #slider .slide {
+    height: 90%;
+    /*mexer tamnho antigo:*/
+    margin: auto 10px;
+    background-color: #cf9d1e;
+    border-radius: 5px;
+    /*box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;*/
+    display: grid;
+    place-items: center;
+
+}
+
+#slider-container #slider .slide span {
+    color: white;
+    font-size: 60px;
+    /*tamno da fonte*/
+    width: 150px;
+}
+
+img {
+    width: 150px;
+}
+
+/*---------------------------Responsividade----------------------------------*/
+
+@media only screen and (min-width: 1100px) {
+    #slider-container #slider .slide {
+        width: calc(2.5% - 20px);
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+    #slider-container #slider .slide {
+        width: calc(3.3333333% - 20px);
+    }
+
+    #slider-container {
+        height: 150px;
+        /* diminuir aqui*/
+        width: 100%;
+        /* largura do box foi aqui que ajustei o tamano da pagina A4*/
+    }
+
+    .slide {
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 130px;
+
+    }
+}
+
+/*mobil*/
+@media only screen and (max-width: 900px) {
+    #slider-container #slider .slide {
+        width: calc(5% - 20px);
+    }
+
+
+    #slider-container {
+        height: 150px;
+        /* diminuir aqui*/
+        width: 100%;
+        /* largura do box foi aqui que ajustei o tamano da pagina A4*/
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #slider-container #slider .slide {
+        width: calc(10% - 20px);
+    }
+
+    /* #slider-container{
+        
+    }*/
+    #slider-container {
+        height: 150px;
+        /* diminuir aqui*/
+        width: 100%;
+        /* largura do box foi aqui que ajustei o tamano da pagina A4*/
+    }
+
+    .slide {
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 260px;
+        padding: 5px 90px 5px 0px;
+    }
+}

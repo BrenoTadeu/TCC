@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Criação da base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Raleway', sans-serif;
+}
+
+/* Corpo */
+body {
+    background-color: #e9bb48;
+    height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0; 
+    padding: 0;
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    flex-direction: column;     
+}
+
+/* Menu */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #f0ebc8;
+    padding: 0 20px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.menu .logo img {
+    height: auto;
+    max-width: 110px;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5;
+}
+
+.menu ul li {
+    margin-left: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #e9bb48;
+    transform: scale(1.1);
+}
+
+/* Banner */
+    .banner {
+        position: relative;
+        top: 70px;
+        left: 50%;
+        width: 100%;
+        height: 900px;
+        transform: translateX(-50%);
+        background-image: url('./imagens/banner suporte 3.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+/* Mensagem dentro do banner */
+.banner-message {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    z-index: 1;
+}
+
+/* Contêiner de Cards */
+.cards {
+    display: flex;              
+    flex-wrap: wrap;            
+    justify-content: center;    
+    align-items: center;        
+    gap: 30px;                 
+    margin-top: 20px;        
+}
+
+/* Estilo dos cards */
+.card {
+    width: 190px;
+    height: 254px;
+    background: #6d3d14;
+    transition: all 0.4s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px #6d3d14c4;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px 5px #6d3d14c4;
+    background: #6d3d14;
+}
+
+/* Primeira parte do conteúdo */
+.first-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+/* Segunda parte do conteúdo */
+.second-content {
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+    color: white;
+    transition: all 0.4s;
+    transform: rotate(90deg) scale(-1);
+    position: absolute;
+}
+
+/* Efeitos quando a card é hover */
+.card:hover .first-content {
+    height: 0;
+    opacity: 0;
+}
+
+.card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size: 0.9rem;
+    transform: rotate(0deg) scale(1);
+}
+
+
+@media (max-width: 1200px) {
+  .menu ul li a {
+      font-size: 16px;
+  }
+
+  .banner-message h1 {
+      font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu ul li a {
+      font-size: 15px;
+  }
+
+  .card {
+      width: 160px;
+      height: 210px;
+  }
+
+  .banner-message h1 {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      flex-direction: column;
+  }
+
+  .menu ul {
+      align-items: center;
+  }
+
+  .menu ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  .card {
+      width: 80%;
+      margin: 10px 0;
+  }
+
+  .banner {
+      height: 300px;
+  }
+
+  .banner-message h1 {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+    .menu ul {
+        align-items: center;  
+        padding: 10px 0;  
+        display: flex;  
+    }
+  
+    .menu ul li a {
+        font-size: 14px; 
+        padding: 10px 15px;  
+        width: 100%;  
+        text-align: center;  
+    }
+  
+    .card {
+        margin-top: 90%;
+        width: 95%;  
+        height: 120px;  
+        margin: 10px auto;  
+        transition: transform 0.3s ease;  
+    }
+    .cards{
+        margin-top: 150%; 
+    }
+  
+    
+    .card:hover {
+        transform: scale(1.03); 
+        margin: 10px 0;  
+    }
+  
+    
+    .banner {
+        height: 250px;  
+        background-position: center;  
+    }
+  
+    
+    .banner-message h1 {
+        font-size: 25px; 
+        padding: 0 15px;  
+        text-align: center;  
+        line-height: 1.2;  
+    }
+    .second-content{
+        font-size: 20px;
+    }
+    .card:hover .second-content{
+        font-size: 20px;
+    }
+  
+  }

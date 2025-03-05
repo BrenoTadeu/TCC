@@ -1,0 +1,967 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-image: url(./imagens/banner\ site\ novo.png);
+    background-size: 100%;
+}
+
+
+.imgBanner {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 4rem;
+}
+
+
+
+
+/* Container da NavBar*/
+.containerInicio {
+    max-width: 100%;
+}
+
+
+.logo {
+    height: 150px;
+}
+
+/* Estilo do menu*/
+menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 105px;
+
+}
+
+
+menu ul {
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+menu ul a {
+    margin: 10px;
+    color: white;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    position: relative;
+
+}
+
+menu ul a:not(.btmCadastro):before {
+    position: absolute;
+    content: "  ";
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+menu ul a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+menu ul a:hover::before {
+    width: 100%;
+
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+@media only screen and (max-width: 730px) {
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    menu {
+        padding: 1.5rem 2rem;
+    }
+
+    .itemMenu {
+        display: none;
+    }
+
+    .btmCadastro {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .mobile-menu-icon button span:focus {
+        border: none;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .itemMenu {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .btmCadastro {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .btmCadastro {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
+
+    /* header{
+        background-image: url(imagens/banner1Responsivo.jpeg);
+        background-size: 150%;
+        background-repeat: no-repeat;
+    } */
+}
+
+/* Inicio do estilo do botão de cadastro*/
+.divBtmEntrar {
+    width: 100px;
+}
+
+.btmCadastro {
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+}
+
+.btmCadastro:hover {
+    color: black;
+    background-color: rgb(210, 210, 210);
+    text-decoration: none;
+}
+
+/*Fim do estilo do botão de cadastro*/
+/* Estilo de Banner*/
+.banner {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    text-align: center;
+}
+
+.paiBanner {
+    width: 100%;
+    height: 300px;
+}
+
+
+/* Tamanho da Imagem do index*/
+
+.imagemBanner {
+    width: 100%;
+}
+
+.imgBody {
+    width: 70%;
+    padding-top: 5%;
+}
+
+/*Estilo da Div do banner*/ 
+.divBanner {
+    max-width: 100%;
+    text-align: right;
+    padding-right: 5%;
+}
+
+
+/*Estilo do texto do index*/ 
+.h4Banner {
+    color: White;
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.pBanner {
+    color: White;
+    font-size: 30px;
+    font-family: 'Montserrat';
+    font-weight: 200;
+}
+
+.h4Conteudo {
+    font-size: 50px;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    padding-top: 20%;
+}
+
+.h4Encontrados {
+    text-align: center;
+    border: 2px solid green;
+    font-size: 40px;
+    font-family: 'Montserrat';
+    font-weight: 800;
+}
+
+.pConteudo {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    padding-bottom: 3%;
+}
+
+.h4Feedbacks {
+    font-size: 50px;
+}
+/*Fim do estilo do Texto do index todo*/
+
+/* Estilo do botões*/
+.btnBanner {
+    width: 50%;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    background: linear-gradient(to right, #fab64a, rgb(255, 166, 0));
+    border: white;
+    animation-name: botao;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 50px 5px orange;
+}
+
+.btnBanner a {
+    text-decoration: none;
+    color: white;
+}
+
+.btnBanner:hover {
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/*Keyframes Dos botões*/
+@keyframes botao {
+    0% {
+        outline: 0px solid orange;
+    }
+
+    100% {
+        outline: 15px solid rgba(249, 193, 90, 0.459);
+    }
+
+}
+
+/*Fim do keyframe dos botões*/
+.divBtnBanner {
+    padding-right: 2%;
+    height: 70px;
+}
+
+#btnEntrar a {
+    width: 50%;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Raleway';
+    font-weight: 600;
+    color: white;
+    margin: 0 15px;
+    border: 3px solid orange;
+    border-radius: 14px;
+    position: relative;
+
+}
+
+#btnEntrar a:hover {
+    text-decoration: none;
+}
+
+.btnCa {
+    background-color: white;
+    width: 5%;
+    border-radius: 100%;
+    font-size: x-large;
+    font-family: 'Roboto', 'Sans-seriff';
+    font-weight: 400;
+    border: none;
+}
+
+.btnCa:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 2px 2px rgba(247, 181, 58, 0.616);
+    transition: 0.4s;
+}
+
+.btnCa:focus {
+    outline: 0;
+}
+
+/*fim Do estilo do Botões do index*/
+
+/*Começo do estilo do contéudo*/
+.container {
+    max-width: 90%;
+}
+
+.row {
+    margin: 1%;
+}
+
+
+.colTexto {
+    margin: 2%;
+}
+
+.colImg {
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowFeedbacks {
+    padding-top: 4%;
+    padding-bottom: 3%;
+}
+
+.colFeedback {
+    margin-bottom: 10%;
+    width: 40%;
+    height: 450px;
+}
+
+.pFeedbacks {
+    margin: 3%;
+}
+
+.h4Feedbacks {
+    margin: 4%;
+}
+
+/*Fim do estildo conteudo*/
+
+/*Para deixar Responsivo*/
+@media only screen and (max-width: 1200px) {
+    body {
+        background-image: url(./imagens/banner1000px.jpeg);
+        background-size: 100%;
+    }
+
+
+    menu {
+        height: 50px;
+    }
+
+    menu ul a {
+        margin: 10px;
+        color: white;
+        font-size: 15px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        position: relative;
+
+    }
+
+    .btmCadastro {
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .paiBanner {
+        height: 195 px;
+    }
+
+
+    @keyframes botao {
+        0% {
+            outline: 0px solid orange;
+        }
+
+        100% {
+            outline: 5px solid rgba(249, 193, 90, 0.459);
+        }
+
+    }
+
+    #btnEntrar a {
+        width: 50%;
+        height: 20px;
+        font-size: 10px;
+    }
+
+
+    .h4Banner {
+        font-size: 30px;
+    }
+
+    .pBanner {
+        font-size: 15px
+    }
+
+    .btnBanner {
+        width: 50%;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .logo {
+
+        height: 100px;
+    }
+
+}
+/*------------------------------------------------ Mobile ---------------------------------------------*/
+@media only screen and (max-width: 600px) {
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url(./imagens/bannerPequeno.jpeg);
+        background-size: 115%;
+        width: 100%;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .paiBanner {
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .btnBanner {
+        width: 50%;
+        height: 10px;
+        font-size: 5px;
+    }
+
+    .divBanner {
+        height: 100px;
+    }
+
+    @keyframes botao {
+        0% {
+            outline: 0px solid orange;
+        }
+
+        100% {
+            outline: 5px solid rgba(249, 193, 90, 0.459);
+        }
+
+    }
+
+    #btnEntrar a {
+        width: 70%;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .h4Banner {
+        font-size: 15px;
+    }
+
+    .pBanner {
+        font-size: 10px
+    }
+
+    .h4Conteudo {
+        font-size: 15px;
+        margin-top: 80px ;
+        
+    }
+
+    .pConteudo {
+        font-size: 13px;
+        width: 80vw;
+
+    }
+
+    .divBanner {
+        max-width: 110rem;
+        height: 300px;
+        text-align: right;
+        /* border: 2px solid red; */
+    }
+
+    .imgBody {
+        width: 100%;
+    }
+
+    .tituloFooter{
+        display: none;
+    }
+
+    .example-2 {
+        justify-self: end;
+        flex-direction: column;
+    }
+
+    .logoFooter{
+        display: none;
+    }
+
+    .fimFooter{
+        margin-top: 3%;
+    }
+
+    .itemFooter{
+        margin: 15px;
+    }
+
+    .pConteudo{
+        font-size: 18px;
+        margin-top: 70px;
+        z-index: 7;
+    }
+
+    .imgBody{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .bg-transparent{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .container2{
+        flex-direction: column;
+        display: flex;
+;
+        width: 100%;
+        height: 500px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 90%;
+    }
+    .colTexto{
+        width: 200%;
+
+    }
+    .container3{
+        margin-top: 100px;
+        display: flex;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 90%;
+    }
+    .rowFeedbacks {
+        margin-top: -120px;
+    }
+
+    menu{
+        background-color:#ecb76b ;
+    }
+
+    /* .banner{
+        background-image: url(imagens/banner1Responsivo.jpeg);
+        background-size: 150%;
+        background-repeat: no-repeat;
+    } */
+
+    .pBanner{
+        font-size: 16px;
+    }
+
+    .btnBanner{
+        width: 50%;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .btnBanner .btnAnimation{
+        width: 50%;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .paiBanner{
+        background-image: url(imagens/banner1Responsivo.jpeg);
+        background-size: 150%;
+        height: 235px;
+        background-repeat: no-repeat;
+        margin: 0px;
+        padding: 0px;
+        
+    }
+
+    header{
+        background-image: url(imagens/banner1Responsivo.jpeg);
+        background-size: 150%;
+        background-repeat: no-repeat;
+        padding: 0px;
+        margin: 0px;
+    } 
+
+    .h4Conteudo{
+        font-size: 30px;
+        width: 90vw;
+    }
+
+    .colFeedback{
+        margin-bottom: 600px;
+        width: 70vw
+    }
+    .card{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .btnCa{
+        margin-top: 24rem;
+        /* border: #000 2px solid; */
+        z-index: 7;
+    }
+
+    #prox.btnCa{
+        right: 5px;
+    }
+
+    #ante.btnCa{
+        left: 2px;
+    }
+    
+}
+/* --------------------------------------FIM do Media----------------------- */
+
+
+
+.col-sm {
+    height: 400px;
+}
+
+
+.footer {
+    display: flex;
+    height: auto;
+    position: absolute;
+    bottom: 1;
+    right: 0;
+    background: linear-gradient(to right, #fab64a, rgb(255, 166, 0));
+    width: 100%;
+    flex-direction: column;
+    /* border: 2px solid green; */
+}
+
+.footer nav ul a {
+    color: rgba(255, 255, 255, 0.822);
+}
+
+.divAjuda {
+    display: flex;
+    flex-direction: column;
+}
+
+.divRedes {
+    display: flex;
+    justify-content: end;
+}
+
+.divImagemLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ulFooter {
+    margin: 2%;
+    margin-left: 60%;
+    margin-top: 1.5rem;
+}
+
+
+.itemFooter {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.itemFooter:hover {
+    color: #dbdbdb;
+    text-decoration: none;
+}
+
+
+.tituloFooterAjuda {
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    cursor: default;
+}
+
+.tituloFooter {
+    cursor: default;
+    position: absolute;
+    margin-right: 1.6rem;
+    margin-bottom: 4rem;
+    font-size: 17px;
+    color: white;
+    font-weight: 700;
+}
+
+.logoFooter {
+    width: 35%;
+}
+
+.colFooter {
+    margin-top: 1%;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.example-2 {
+    display: flex;
+    margin: 2%;
+    margin-right: 60%;
+    justify-content: end;
+    align-items: center;
+}
+
+.example-2 .icon-content {
+    margin: 10px 8px 10px 10px;
+    position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+}
+
+.example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+}
+
+.example-2 .icon-content a:hover {
+    color: white;
+}
+
+.example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"]~.tooltip {
+    background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"]~.tooltip {
+    background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"]~.tooltip {
+    background: linear-gradient(45deg,
+            #405de6,
+            #5b51db,
+            #b33ab4,
+            #c135b4,
+            #e1306c,
+            #fd1f1f);
+}
+
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"]~.tooltip {
+    background-color: #ff0000;
+}
+
+hr {
+    background-color: white;
+    margin: 1%;
+    margin-bottom: 0;
+
+}
+
+.divFimFooter {
+    width: 100%;
+}
+
+.divFimFooter ul a {
+    margin: 0px 15px;
+}
+
+/*Inicio do CSS do card*/
+.slider {
+    position: relative;
+    height: 760px;
+    overflow: hidden;
+    top: 0;
+}
+
+.card {
+    margin: 10px;
+    position: absolute;
+    border: 2px solid rgba(255, 255, 255, 0.589);
+    border-radius: 10px;
+    background: linear-gradient(13deg, orange 25%, #fab64a);
+}
+
+.slider .card {
+    transition: transform 0.5s ease, z-index 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+}
+
+.card-title{
+    color: white;
+}
+
+.card-text{
+    color: white;
+}
+
+#ante,
+#prox {
+    position: absolute;
+}
+
+#prox {
+    left: unset;
+    right: 20px;
+}
+
+#ante {
+    left: 20px;
+}
+
+.container_footer{
+    max-width: 90%;
+}
+
+.example-2 {
+    display: flex;
+    /* flex-direction: column; */
+
+}
+
+
+.row_footer{
+    display: flex;
+     flex-direction: column; 
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

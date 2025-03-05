@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" href="imagens/logonomecompleto.png" type="image/x-icon">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro | AcheiPet</title>
+</head>
+
+<body>
+    
+    <img src="imagens/dog high five-cuate.png" class="imgBody">
+    <div class="container">
+        <div class="Icon">
+            <a href="../index.html">
+                <!--logo-->
+                <img class="logo" src="imagens/logonomecompleto.png" alt="logo">
+            </a>
+        </div>
+    </div>
+    <div class="fundoFormulario">
+        <div class="formulario">
+            <form action="../controller/cadastro.php" id="form" method="post">
+                <h2 class="cadastroH1">Cadastro</h2>
+                <div class="input-single form-row">
+                    <div class="col">
+                        <input type="text" name="nome" id="nome" placeholder="Nome" oninput="nomeUser()">
+                        <div class="underline"></div>
+                        <div class="input-preenchido"></div>
+                        <div class="inputInvalido"></div>
+                        <span class="spanInput">Campo Obrigatório</span>
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="col">
+                        <input type="text" class="padding" name="sobrenome" oninput="sobrenomeUser()" id="sobrenome"
+                            placeholder="Sobrenome">
+                        <div class="underline"></div>
+                        <div class="input-preenchido"></div>
+                        <div class="inputInvalido"></div>
+                        <span class="spanInput" style="width: 150px ;">Campo Obrigatório</span>
+                    </div>
+                </div>
+                <div class="input-single form-row">
+                    <input type="text" name="nomeUsername" id="nomeUsername" placeholder="Digite seu Username">
+                    <div class="underline "></div>
+                    <div class="input-preenchido"></div>
+                    <div class="inputInvalido"></div>
+                    <span class="spanInputUserName">Campo Obrigatório</span>
+                </div>
+                <div class="input-single form-row">
+                    <input type="email" name="email" id="email" oninput="emailUser()" placeholder="Digite seu email">
+                    <div class="underline "></div>
+                    <div class="input-preenchido"></div>
+                    <div class="inputInvalido"></div>
+                    <span class="spanInputEmail">Campo Obrigatório</span>
+                </div>
+                <div class="input-single form-row">
+                    <input type="password" name="senha" id="senha" oninput="senhaUser()" placeholder="Senha">
+                    <div class="underline "></div>
+                    <div class="input-preenchido"></div>
+                    <div class="inputInvalido"></div>
+                    <span class="spanInputSenha">Senha Obrigatória</span>
+                </div>
+                <div class="input-single form-row">
+                    <input type="password" name="confirmaSenha" id="confirmarsenha" oninput="confirmSenha()"
+                        placeholder="Confirmação de senha">
+                    <div class="underline "></div>
+                    <div class="input-preenchido"></div>
+                    <div class="inputInvalido"></div>
+                    <span class="spanInputSenha">Confirme Sua Senha</span>
+                </div>
+                <div class="input-single form-row">
+                    <input type="text" name="celular" id="celular" placeholder="Celular" oninput="celularUser()">
+                    <div class="underline "></div>
+                    <div class="input-preenchido"></div>
+                    <div class="inputInvalido"></div>
+                    <span class="spanInputSenha">Campo Obrigatório</span>
+                </div>
+                <div class="input-single dataNasci">
+                    <label class="labelDataNasc">Data Nascimento</label>
+                    <input type="date" name="dataNasc" placeholder="data de nascimento" oninput="DataNasc()" id="dataNasc">
+                    <div class="underline "></div>
+                    <div class="input-preenchido"></div>
+                    <div class="inputInvalido"></div>
+                    <span class="spanInputSenha spanData">Insira uma Data</span>
+                </div>
+                <div class="input-single form-row">
+                    <div class="col">
+                        <input type="text" name="cidade" id="cidade" placeholder="Cidade" oninput="cidadeUser()">
+                        <div class="underline "></div>
+                        <div class="input-preenchido"></div>
+                        <div class="inputInvalido"></div>
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="col">
+                        <input type="text" class="padding" name="estado" id="estado" placeholder="Estado" oninput="estadoUser()">
+                        <div class="underline "></div>
+                        <div class="input-preenchido"></div>
+                        <div class="inputInvalido"></div>
+                        
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <br>
+                <label class="container labelCheckbox">
+                    <input type="checkbox" name="situacao" value="aceitou os termos">
+                    <p class="pCheckbox"> ao selecionar, você aceita os <a href="privacidade.html">termos de
+                            privacidade</a></p>
+                    <div class="checkmark"></div>
+                </label>
+                <br>
+                <input type="submit" name="submit" class="botaoEnviar" value=" ">
+
+                <div class="footer">
+                    <span>Já possui uma conta? <a href="index3.html">Clique aqui</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="arquivoJs/scriptCadastro.js"></script>
+</body>
+</html>

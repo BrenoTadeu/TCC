@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Raleway', sans-serif;
+}
+
+body {
+    background-color: #e9bb48;
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #f0ebc8;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between; /* Alinha o logo à esquerda e os botões à direita */
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    padding: 0 20px; /* Adiciona um pequeno espaçamento às laterais */
+}
+
+.logo img {
+    height: auto;
+    max-width: 125px;
+}
+
+ul.button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    gap: 10px; /* Espaçamento entre os botões */
+    list-style: none; /* Remove os pontos das listas */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+}
+
+ul.button-container li {
+    margin: 0; /* Remove margens dos itens da lista */
+}
+
+.menu button {
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex; /* Garante que os botões fiquem lado a lado */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 0.5rem 1rem;
+}
+
+.menu button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu button:before {
+    background-color: black;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+    margin-top: 2.2rem;
+}
+
+.menu button:hover:before {
+    background-color: white;
+    width: 3rem;
+    margin-top: 2.2rem;
+
+}
+
+
+ 
+.box {
+    position: relative;
+    width: 650px;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1;
+    margin-top: 150px;
+   }
+   
+   .box::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+   }
+   
+   .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+   }
+   
+   .box:hover:before,
+   .box:hover:after {
+    transform: skewX(0deg) scaleX(1.3);
+   }
+   
+   .box:before,
+   .box:after {
+    background: linear-gradient(315deg, #6d3d14, #6d3d14)
+   }
+   
+   .box span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    pointer-events: none;
+   }
+   
+   .box span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.1s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+   }
+
+   .box span::before {
+    top: -40px;
+    left: 40px;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+   }
+   
+   .box span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    animation-delay: -1s;
+   }
+   
+   .box span:after {
+    bottom: -40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+   }
+   
+   .box .content {
+    position: relative;
+    width: 550px;
+    height: 650px;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .box .content h2 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+   }
+   .button-link {
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+  }
+  
+  .button-link:before {
+    background-color: white;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 9px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+  }
+  @media (max-width: 768px) {
+    /* Menu */
+    .menu {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    ul.button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Box */
+    .box {
+        width: 90%;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .box .content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Botões */
+    .menu button {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+
+    }
+}
+
+/* Telas menores que 480px (dispositivos móveis pequenos) */
+@media (max-width: 480px) {
+    /* Menu */
+    .menu {
+        padding: 10px;
+        height: 190px;
+        flex-direction: column;
+
+    }
+
+    .logo img {
+        max-width: 95px;
+    }
+
+    ul.button-container {
+
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Box */
+    .box {
+        width: 93%;
+        margin-top: 250px;
+        height: auto;
+    }
+
+    .box .content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Botões */
+    .menu button {
+        font-size: 0.8rem;
+        padding: 0.7rem;
+    }
+
+    /* Ajustes no link do botão */
+    .button-link {
+        font-size: 0.9rem;
+    }
+    .box .content h2 {
+        width: 100%; /* O texto ocupa 100% do espaço disponível */
+        line-height: 1.2; 
+        font-size: 1.2rem; /* Reduz ainda mais o tamanho da fonte para dispositivos muito pequenos */
+    }
+    .box:before,
+   .box:after{
+    width: 85%;
+   }
+}

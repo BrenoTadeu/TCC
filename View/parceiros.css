@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    
+}
+/*imagem do menu gatinho acheipet */
+.box-logo{
+    background-color:#e9bb48;
+    position: absolute;
+}
+/*menu da pagina */
+.logoimg {
+    height: 135px;
+  }
+  /*corpo da pagina
+.corpoPagina{
+    
+}*/
+/*divi pai folha A4*/
+.pai{
+display: flex;
+flex-direction:column;
+align-items: center;
+background-color:  #e9bb48;
+
+
+
+}
+/* folha A4*/
+.filho{
+    width:60%;
+    height:100%;
+    padding: 20px;
+    margin: 20px 0 20px 0;
+    background-color: #cf9d1e; 
+    box-shadow:rgba(255, 255, 255, 0.564)  0px 7px 29px 0px; 
+    border-radius: 1%;
+   
+}   
+
+iframe{
+    width:90%;
+    height:400px;
+    padding: 5px 0 5px 0 ;
+    }
+   
+.titulo1{
+    font-family: 'Oswald';
+    padding: 15px 05px 15px 0;
+    color: white;
+}
+.titulo2{
+    padding: 15px 05px 15px 0;
+    font-size: 40px;
+    color: white;
+}
+.paragrafo1{
+    font-size: 20px;
+    padding: 15px 05px 15px 0;
+    color: white;
+}
+.video{
+   margin: 20px 0 20px 0;
+}
+.titulo3{
+    margin: 10px 0 10px 0;
+    color: white;
+
+}
+/*--------------------- logo imagem dos patrocinios----------------------*/
+.box{
+    display: flex;
+    justify-content:center;
+    justify-content: flex-center;
+    gap: 10px;
+    /*border: solid rgb(32, 34, 32) 1px;*/
+    word-wrap: break-word;
+    white-space: normal;
+    flex-wrap:wrap;
+    
+  
+}
+.box1{/*pai do .imgLogoPaecerias*/
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 150px; 
+    /*border: solid 1px green;*/
+}
+/*--------------------- imgagem do logo do parceiro----------------------*/
+.imgLogoParceiros{
+    
+    width: 180px;
+    align-items: center;
+    /*border: solid blue 1px;*/
+    
+}
+.box2{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 150px; 
+    /*border: solid 1px green;*/
+}
+.box3{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 150px; 
+   /*border: solid 1px green;*/
+}
+.box4{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 150px; 
+   /*border: solid 1px green;*/
+}
+.box5{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 150px; 
+    /*border: solid 1px green;*/
+}
+.box6{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 150px; 
+   /*border: solid 1px green;*/
+}
+/*-----------------------------formulario----------------------------------*/
+
+.forms{
+    background-color:#f0ebc8;/*acha a cor padrão*/
+    padding: 20px;
+    border-radius: 1%;
+    color: gold;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+}
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+   
+  }
+    /*caixinha dos input*/
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+   
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+    background-color: #fff;
+   
+  }
+  
+
+  
+  .botao_submit[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background-color: rgb(218, 213, 213);
+    background-image: url(./imagens/pata2.png);
+  }
+  .botao_submit[type=submit]{
+    padding: 23px 70px;
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    background-image: url(./imagens/pata.png);
+    color: #6d6b6b;
+    font-size: 13px;
+    background-color: rgb(218, 213, 213);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    display:block;
+    margin: 0 auto;
+  }
+  /* caixa de texto ou descrição*/
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    
+  }
+  
+ 
+  
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-align: center;
+    
+  }
+  
+  .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-align: center;
+    border: solid black 2px;
+  }
+  /*------------contúdo do span da mensagem-------------------------------*/
+  #mensagem {
+    transition: all 0.52s;
+    background: #FFF;
+    border: #777 solid 1px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.52);
+    position: fixed;
+    top: -150px;
+    width: 50%;
+    padding: 25px 0;
+    text-align: center;
+    left: 25%;
+    opacity: 0;
+  }
+  /*------------local onte a mensagem aparece-------------------------------*/
+  #mensagem.ver {
+    top: 75px;
+    opacity: 1;
+  }
+   /* -------CSS básico para esconder e mostrar a mensagem ----------*/
+   #mensagem {
+    display: none;
+    color: green;
+  }
+  
+  #mensagem.ver {
+    display: block;
+  }
+  #mensagem {
+  display: none;
+  color: green;
+  }
+  
+  /*---------- Esconder os campos de estudante inicialmente -----------*/
+  #campos-estudante {
+  display: none;
+  }
+  
+
+/*------------------------------------ tablet---------------------------------------------------*/
+
+@media (min-width: 400px) and (max-width:768px){/**/
+    
+    .filho{
+        width:90%;
+        height:100%;    
+    }  
+  
+    .box-logo{
+        background-color:#e9bb48;
+        position:relative;
+       
+    }
+    .logo {
+        height: 80px;
+       /*border: solid 1px green;*/
+    
+      }
+      .video{
+        margin: 20px 0 20px 0;
+      }
+      iframe{
+        width:100%;
+        height:400px;
+        padding: 5px 0 5px 0 ;
+        }
+      .box{
+        display: flex;
+        justify-content:center;
+        justify-content:space-around;
+        /*border: solid rgb(128, 0, 19) 1px;*/
+        word-wrap: break-word;
+        white-space: normal;
+        flex-wrap:wrap;
+        
+      }
+      /*pai do .imgLogoPaecerias*/
+      .box1{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        height: 150px; 
+        /*border: solid 1px rgb(0, 2, 128);*/
+      }
+      .imgLogoParceiros{
+    
+        width: 130px;
+        align-items: center;
+        /*border: solid blue 1px;*/
+        
+    }
+      .box2{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        height: 150px; 
+        /*border: solid 1px rgb(0, 2, 128);*/
+      }
+      .box3{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        height: 150px; 
+        /*border: solid 1px rgb(0, 2, 128);*/
+      }
+      .box4{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        height: 150px; 
+       /* border: solid 1px rgb(0, 2, 128);*/
+      }
+      .box5{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        height: 150px; 
+        /* border: solid 1px rgb(0, 2, 128);*/
+      }
+      .box6{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        height: 150px; 
+        /* border: solid 1px rgb(0, 2, 128);*/
+      }
+
+      
+}
+/* -----------------------------mabil----------------------------------------------*/
+@media screen and (max-width:399px){/*daqui pra menos*/
+    .box-logo{
+        background-color:#e9bb48;
+        position:relative;
+        display: flex;
+        justify-content: center;
+    }
+     /*imagem do menu gato acheipet*/
+     .logoimg {
+        height: 140px;
+        margin-left: 20px;
+        align-items: center;
+       display: inline;
+       padding-left: 25%;
+        width: 300px;
+        justify-content: center;
+        justify-items: center;
+ 
+    
+        
+      }
+
+
+
+    .filho{
+        width:100%;
+        height:100%;    
+    }  
+    header{
+        /*border: solid 1px yellow;*/
+        width: 100%;
+        height: 100%
+    }
+     iframe{
+        width:100%;
+        height:400px;
+        padding: 5px 0 5px 0 ;
+        }
+       
+    /*cardParceiros*/
+    .box1{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 180vh;
+        height: 100px; 
+        /*border: solid 1px rgb(128, 0, 30);*/
+    }
+    .imgLogoParceiros{
+    
+        width: 200px;
+        align-items: center;
+        /*border: solid blue 1px;*/
+        
+    }
+    .box2{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 180vh;
+        height: 100px; 
+        /*border: solid 1px rgb(128, 0, 30);*/
+    }
+    .box3{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 180vh;
+        height: 100px;  
+        /*border: solid 1px rgb(128, 0, 30);*/
+    }
+    .box4{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 180vh;
+        height: 100px; 
+         /*border: solid 1px rgb(128, 0, 30);*/
+    }
+    .box5{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 180vh;
+        height: 100px; 
+         /*border: solid 1px rgb(128, 0, 30);*/
+    }
+    .box6{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 180vh;
+        height: 100px; 
+         /*border: solid 1px rgb(128, 0, 30);*/
+    }
+}
+
+
+
+    
+ 
